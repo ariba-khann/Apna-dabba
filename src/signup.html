@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Your Profile</title>
+  <style>
+    /* Styles go here */
+    .container {
+      text-align: center;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 16px;
+    }
+    button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Create Your Profile</h2>
+    <form id="profileForm">
+      <div class="form-group">
+        <label>Name:</label>
+        <input type="text" name="name" placeholder="Your Name" required>
+      </div>
+      <div class="form-group">
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male" required> Male
+        <input type="radio" name="gender" value="female" required> Female
+      </div>
+      <div class="form-group">
+        <label>Email:</label>
+        <input type="email" name="email" placeholder="Email Address" required>
+      </div>
+      <div class="form-group">
+        <label>Contact number:</label>
+        <input type="text" name="phoneNumber" placeholder="Contact Number" required pattern="[0-9]*">
+      </div>
+      <button type="button" id="generateOTPButton">Generate OTP</button>
+      <div class="form-group">
+        <input type="text" name="otp" placeholder="OTP" readonly>
+      </div>
+      <div class="form-group">
+        <label>Enter your birthdate:</label>
+        <input type="date" name="dob" required>
+      </div>
+      <div class="form-group">
+        <label>Create a Password:</label>
+        <input type="password" name="password" placeholder="Password" required>
+      </div>
+      <div class="form-group">
+        <label>Re-enter Password:</label>
+        <input type="password" name="rePassword" placeholder="Re-enter Password" required>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  
+  <script>
+    document.getElementById('profileForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const formData = new FormData(this);
+      const password = formData.get('password');
+      const rePassword = formData.get('rePassword');
+
+      if (password !== rePassword) {
+        alert('Passwords do not match. Please re-enter your password.');
+      } else {
+        alert('Your account has been created.');
+        console.log('Form submitted:', Object.fromEntries(formData.entries()));
+        // Redirect to the desired page
+        window.location.href = '/login.html'; // Replace with your desired URL
+      }
+    });
+  </script>
+</body>
+</html>

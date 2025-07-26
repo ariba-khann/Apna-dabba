@@ -1,0 +1,44 @@
+.review-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .review-heading {
+    text-align: center;
+  }
+  
+  .review-details {
+    margin-top: 20px;
+  }
+  
+  .review-details p {
+    margin-bottom: 10px;
+  }
+  
+  .review-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .edit-button,
+  .confirm-button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .edit-button:hover,
+  .confirm-button:hover {
+    background-color: #0056b3;
+  }
+  

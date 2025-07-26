@@ -1,0 +1,181 @@
+
+
+.confirmation-container {
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 400px;
+  margin-right: 400px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  font-size: 44px;
+  color: #444C38;
+  font-weight: bold;
+  text-decoration: underline;
+  font-family: 'Matura MT Script Capitals';
+  margin: 20px 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #333;
+}
+
+p {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 26px;
+  color: #333;
+}
+
+input, textarea {
+  width: 300;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-button {
+  margin-top: -500px;
+}
+.confirmation-textarea {
+  width: 100%;
+  min-height: 2ch;
+  max-width: 400px;
+  margin-bottom: -20px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.card {
+  width: 190px;
+  height: 90px;
+  background: linear-gradient(45deg, #66ff73, #42d60c);
+  position: absolute;
+  transition: .4s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0px 0px 30px -10px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  color: #fff;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 550px; 
+}
+
+#c1 {
+  background-color: #3498db;
+  font-size: 25px; 
+  font-style: italic;}
+
+#c2 {
+  background-color: #2ecc71;
+  font-size: 25px; 
+  font-style: italic;
+}
+
+#c3 {
+  background-color: #e74c3c;
+  font-size: 25px; 
+  font-style: italic;
+  text-align: left;
+}
+
+#c4 {
+  background-color: #f39c12;
+  font-size: 25px; 
+  font-style: italic;
+}
+
+.main:hover #c1 {
+  transform: translateX(-100px) rotate(-40deg);
+}
+
+.main:hover #c2 {
+  transform: translateX(-50px) rotate(-30deg);
+}
+
+.main:hover #c3 {
+  transform: translateX(0) rotate(-20deg);
+}
+
+.main:hover #c4 {
+  transform: translateX(50px) rotate(-10deg);
+}
+
+#c1:hover {
+  transform: translateX(-150px) rotate(0deg) !important;
+}
+
+#c2:hover {
+  transform: translateX(-100px) rotate(0deg) !important;
+}
+
+#c3:hover {
+  transform: translateX(-50px) rotate(0deg) !important;
+}
+
+#c4:hover {
+  transform: translateX(50px) rotate(0deg) !important;
+}
+
+.main {
+  display: grid;
+  height:50vmax;
+  place-items: center;
+}
+
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.okay-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.okay-button:hover {
+  background-color: #45a049;
+}
